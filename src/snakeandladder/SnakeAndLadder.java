@@ -22,7 +22,11 @@ public class SnakeAndLadder {
                     break;
                 case 1:
                     System.out.println("Ladder : player moves ahead by the position");
-                    playerPosition += dieNumber;
+                    if (playerPosition + dieNumber > endPosition) {
+                        playerPosition = playerPosition;
+                    } else {
+                        playerPosition += dieNumber;
+                    }
                     System.out.println("Player position : " + playerPosition);
                     break;
                 case 2:
